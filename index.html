@@ -64,9 +64,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-how-to-build-blog-by-hexo-on-ubuntu-18-04" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-build-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/11/how-to-build-blog-by-hexo-on-ubuntu-18-04/" class="article-date">
+    <a href="/2020/02/11/build-blog/" class="article-date">
   <time datetime="2020-02-11T09:09:49.000Z" itemprop="datePublished">2020-02-11</time>
 </a>
     
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/11/how-to-build-blog-by-hexo-on-ubuntu-18-04/">在 Ubuntu 18.04 上用 Hexo 免费搭建博客</a>
+      <a class="article-title" href="/2020/02/11/build-blog/">在 Ubuntu 18.04 上用 Hexo 免费搭建博客</a>
     </h1>
   
 
@@ -90,217 +90,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用 Hexo 搭建博客，既方便速度又快，易入手，可定制性高，还可免费部署。</p>
-<h1 id="〇、-mathcal-Hexo-简介"><a href="#〇、-mathcal-Hexo-简介" class="headerlink" title="〇、 $\mathcal{Hexo}$ 简介"></a>〇、 <a href="https://hexo.io" target="_blank" rel="noopener">$\mathcal{Hexo}$</a> 简介</h1><p>用<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官网的话</a>来说：</p>
-<blockquote>
-<h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200211102702998.png" alt="image-20200211102702998"></p>
-<h1 id="一、环境搭建"><a href="#一、环境搭建" class="headerlink" title="一、环境搭建"></a>一、环境搭建</h1><h2 id="1-安装-mathcal-Git"><a href="#1-安装-mathcal-Git" class="headerlink" title="1. 安装 $\mathcal{Git}$"></a>1. 安装 <a href="https://git-scm.com/" target="_blank" rel="noopener">$\mathcal{Git}$</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
-
-<p>安装好后，检查一下是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -version</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-安装-mathcal-Node-js-及-npm"><a href="#2-安装-mathcal-Node-js-及-npm" class="headerlink" title="2. 安装 $\mathcal{Node.js}$ 及 $npm$"></a>2. 安装 <a href="https://nodejs.org/" target="_blank" rel="noopener">$\mathcal{Node.js}$</a> 及 $npm$</h2><p>我们还需要安装 <a href="https://nodejs.org/" target="_blank" rel="noopener">$\mathcal{Node.js}$</a> 和 $npm$ 。</p>
-<h3 id="2-1-方案一"><a href="#2-1-方案一" class="headerlink" title="2-1 方案一"></a>2-1 方案一</h3><p><strong>注意！</strong>请先不要贸然执行以下指令！请先浏览本小节之后再做决定。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
-
-<p>安装完后，检查一下：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200211135025496.png" alt="node -v"></p>
-<p>在官方文档里可以看到</p>
-<blockquote>
-<p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<ul>
-<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
-<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-</blockquote>
-<p>所以说这个版本有点老了……如果您和我一样更喜欢新版，就请继续看下一节。如果您觉得已经足够了，就按照上面的步骤做并跳过下一节吧：</p>
+        <p>用 Hexo 搭建博客，跨平台，既方便速度又快，易入手，可定制性高，还可免费部署。</p>
 <hr>
-<h3 id="2-2-方案二"><a href="#2-2-方案二" class="headerlink" title="2-2 方案二"></a>2-2 方案二</h3><p>如果您已经执行了上面的步骤，那我只好说声抱歉……执行下面的命令以卸载 $\mathcal{Node.js}$ ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove nodejs</span><br><span class="line">sudo apt autoremove</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-1下载-mathcal-Node-js"><a href="#2-2-1下载-mathcal-Node-js" class="headerlink" title="2-2-1下载 $\mathcal{Node.js}$"></a>2-2-1下载 <a href="http://nodejs.org/" target="_blank" rel="noopener">$\mathcal{Node.js}$</a></h4><p>点开 <a href="http://nodejs.org/" target="_blank" rel="noopener">$\mathcal{Node.js}$</a> 的链接，我们可以看到：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/nodejs.org_en_.png" alt=""></p>
-<p>当然，如果您更希望看中文，没关系，点右上角那个谷歌翻译的图标或者用<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">这个链接</a>（效果相同）即可（然而这个页面我们只需要使用一次）：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/nodejs.org_zh-cn_.png" alt=""></p>
-<p>进入之后，选择您更想要的版本，就会下载相应的 <code>.tar.xz</code> 压缩包。建议下载 $\mathcal{LTF}$（长期支持版）。</p>
-<p>下载完成后，转到下载目录，点击 <code>.tar.xz</code> 压缩包“提取到此处”。喜欢命令行的朋友也可以执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf node-*.tar.xz</span><br></pre></td></tr></table></figure>
-
-<p>我这里运行的命令是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf node-v12.15.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
-
-<p>将解压后的文件夹放到您想要的位置并改名。用命令就是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv node-* *	<span class="comment">#可能要加 sudo</span></span><br></pre></td></tr></table></figure>
-
-<p>我运行的是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv node-v12.15.0-linux-x64 ~/nodejs</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-2-设置全局环境变量。"><a href="#2-2-2-设置全局环境变量。" class="headerlink" title="2-2-2 设置全局环境变量。"></a>2-2-2 设置全局环境变量。</h4><p>先登录 $root$ ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
-
-<p>然后执行下列命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'PATH="$PATH:*/bin"'</span> &gt;&gt; /etc/profile	<span class="comment">#*就是您安装 Node.js 的目录</span></span><br></pre></td></tr></table></figure>
-
-<p>我用的是：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'PATH="$PATH:/home/csj/nodejs/bin"'</span> &gt;&gt; /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>然后就加载并登出吧：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>再测试是否成功：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200211171922318.png" alt="image-20200211171922318"></p>
-<p>可以看到 $\mathcal{Node.js}$ 已是最新版啦！$\mathscr{P}\mathcal{erfect!}$</p>
-<p>[^注]: 用这种方法安装的 $\mathcal{Node.js}$ 内已包含 $npm$ ，无需再下载安装。</p>
-<h2 id="3-安装-mathcal-Hexo"><a href="#3-安装-mathcal-Hexo" class="headerlink" title="3. 安装 $\mathcal{Hexo}$"></a>3. 安装 $\mathcal{Hexo}$</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<h3 id="进阶安装和使用"><a href="#进阶安装和使用" class="headerlink" title="进阶安装和使用"></a>进阶安装和使用</h3><p>对于熟悉 npm 的进阶用户，可以仅局部安装 <code>hexo</code> 包。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo</span><br></pre></td></tr></table></figure>
-
-<p>安装以后，可以使用以下两种方式执行 Hexo：</p>
-<ol>
-<li><p><code>npx hexo</code></p>
-</li>
-<li><p>将 Hexo 所在的目录下的 <code>node_modules</code> 添加到环境变量之中即可直接使用 <code>hexo</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'PATH="$PATH:./node_modules/.bin"'</span> &gt;&gt; ~/.profile</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</blockquote>
-<p>安装后再检测一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="二、-建站"><a href="#二、-建站" class="headerlink" title="二、 建站"></a>二、 建站</h1><h2 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1. 初始化"></a>1. 初始化</h2><p>先新建个文件夹，再进入该文件夹。我将其取名为 <code>website</code> 。</p>
-<p>然后决定您的博客文件夹名。我将其取名为 <code>blog</code> 。</p>
-<p>然后执行下列命令：（请自行更改文件夹名）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>好了！来测试一下吧！</p>
-<p>输入以下命令以开启服务器：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200211180329821.png" alt="image-20200211180329821"></p>
-<p>然后打开浏览器，输入 <code>http://localhost:4000/</code> 。当然您也可以直接点击<a href="http://localhost:4000/" target="_blank" rel="noopener">这个链接</a>。</p>
-<p>然后您就可以看到您的博客长这样：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/localhost_4000_.png" alt=""></p>
-<p>按 <code>Ctrl+C</code> 即可终止。</p>
-<h2 id="2-部署"><a href="#2-部署" class="headerlink" title="2. 部署"></a>2. 部署</h2><h3 id="2-1-部署到-mathcal-GitHub-Pages"><a href="#2-1-部署到-mathcal-GitHub-Pages" class="headerlink" title="2-1 部署到 $\mathcal{GitHub\ Pages}$"></a>2-1 部署到 <a href="https://github.com/" target="_blank" rel="noopener">$\mathcal{GitHub\ Pages}$</a></h3><h4 id="2-1-1-新建库"><a href="#2-1-1-新建库" class="headerlink" title="2-1-1 新建库"></a>2-1-1 新建库</h4><p>首先要有个 <a href="https://github.com/" target="_blank" rel="noopener">$\mathcal{GitHub}$</a> 账户，如果没有的话就<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">注册一个</a>吧！</p>
-<p>当您用账号登入后，<a href="https://github.com/new" target="_blank" rel="noopener">新建</a>一个 <code>repository</code> 。网上的教程都要求必须命名为 <code>username.github.io</code>（其中 <code>username</code> 指用户名） ，不过根据<a href="https://hexo.io/zh-cn/docs/github-pages" target="_blank" rel="noopener">官方文档</a>的说法，这并不是必要的：</p>
-<blockquote>
-<h2 id="Project-page"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page</h2><p>如果您更希望您的站点部署在 <code>&lt;您的 GitHub 用户名&gt;.github.io</code> 的子目录中，您的 repository 需要直接命名为子目录的名字，这样您的站点可以通过 <code>https://&lt;您的 GitHub 用户名&gt;.github.io/</code> 访问。您需要检查您的 Hexo 配置文件，将 <code>url</code> 修改为 <code>https://&lt;您的 GitHub 用户名&gt;.github.io/</code>、将 <code>root</code> 的值修改为 <code>//</code></p>
-</blockquote>
-<p>如此来看，其实我还是更建议命名为 <code>username.github.io</code> 。至于其他选项，还是保持默认吧……</p>
-<h4 id="2-1-2-连接-mathcal-GitHub"><a href="#2-1-2-连接-mathcal-GitHub" class="headerlink" title="2-1-2 连接 $\mathcal{GitHub}$"></a>2-1-2 连接 $\mathcal{GitHub}$</h4><p>然后输入命令绑定 $\mathcal{GitHub}$ 账号：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"username"</span>		<span class="comment"># GitHub 用户名</span></span><br><span class="line">git config --global user.email name@example.com	<span class="comment"># 用于注册 GitHub 的邮箱</span></span><br></pre></td></tr></table></figure>
-
-<p>用 <code>ssh-keygen</code> 生成私钥和公钥：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
-
-<p>接着三个回车下去，不用输入其它的东西：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200212222819277.png" alt="image-20200212222819277"></p>
-<p>然后输入以下命令以打开生成的公钥储存文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>复制文件内容，只用 <code>Ctrl+A</code>、<code>Ctrl+C</code> 再 <code>Alt+F4</code> 就成。</p>
-<p>回到 $\mathcal{GitHub}$ 上，点击右上角的头像，再点击下面菜单中的 <code>Settings</code>：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200212220402085.png" alt="image-20200212220402085"></p>
-<p>在接下来的设置界面点击 <code>SSH and GPG keys</code>：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/github.com_settings_profile.png" alt=""></p>
-<p>接着再点 <code>New SSH key</code> 来创建新秘钥：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/github.com_settings_keys.png" alt=""></p>
-<p><code>Title</code> 随意，将复制的内容粘贴到 <code>Key</code> 中，然后点击 <code>Add SSH key</code> ：（反正是公钥，暴露出来也无妨）</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/github.com_settings_ssh_new.png" alt=""></p>
-<p>然后测试添加 $\mathcal{SSH}$ 是否成功：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>如果输出中在 <code>Hi</code> 后跟着您的 $\mathcal{GitHub}$ 用户名，则说明添加成功：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200212233021160.png" alt="image-20200212233021160"></p>
-<h4 id="2-1-3-部署"><a href="#2-1-3-部署" class="headerlink" title="2-1-3 部署"></a>2-1-3 部署</h4><p>首先需要安装 <code>hexo-deployer-git</code> 插件。在您的博客文件夹（我的叫 <code>blog</code>）内执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后打开 <code>_config.yml</code> ，在末尾找到 <code>Deployment</code> ：</p>
-<p>![](/home/csj/wshare/website/blog/source/_posts/2020-02-12 23-41-46 的屏幕截图.png)</p>
-<p>然后改成这样：（不知道 $\mathcal{SSH}$？就是 <code>git clone</code> 要用的那个！）</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200212235007135.png" alt="image-20200212235007135"></p>
-<p>接下来就只用运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>$\mathcal{PS:}$ </p>
-<p>如果遇到<img src="/home/csj/wshare/website/blog/source/_posts/image-20200212235838605.png" alt="image-20200212235838605">，</p>
-<p>请重新执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>看到这样：</p>
-<p><img src="/home/csj/wshare/website/blog/source/_posts/image-20200212235943775.png" alt="image-20200212235943775"></p>
-<p>就说明部署成功啦！</p>
-<p>打开 <code>username.github.io</code> ，就可进入您的博客咯~</p>
-<h1 id="三、基本操作"><a href="#三、基本操作" class="headerlink" title="三、基本操作"></a>三、基本操作</h1><p>了解 <a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">$\mathcal{Hexo}$ 的各种命令</a>。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/02/11/build-blog/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/11/how-to-build-blog-by-hexo-on-ubuntu-18-04/" data-id="ck6jizvvg00004nix5jpn7ibz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/11/build-blog/" data-id="ck6katm2x0000oyixacsm2ee7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag">原创</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/hello-world/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1970/01/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/1970/01/01/hello-world/" data-id="ck6hprl6t0000rfixeyb51uzn" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -347,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
     </div>
   </div>
 
@@ -360,11 +164,7 @@
       <ul>
         
           <li>
-            <a href="/2020/02/11/how-to-build-blog-by-hexo-on-ubuntu-18-04/">在 Ubuntu 18.04 上用 Hexo 免费搭建博客</a>
-          </li>
-        
-          <li>
-            <a href="/1970/01/01/hello-world/">Hello World</a>
+            <a href="/2020/02/11/build-blog/">在 Ubuntu 18.04 上用 Hexo 免费搭建博客</a>
           </li>
         
       </ul>
