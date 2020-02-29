@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives: 2020 | Hexo</title>
+  <title>math | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="微积分导数1. 定义设函数 $y&#x3D;f(x)$ 在点 $x_0$ 的某个邻域内有定义，当自变量 $x$ 在 $x_0$ 处取得增量 $\Delta x$ （点 $x_0+\Delta x$ 仍在该邻域内）时，相应地，因变量取得增量 $\Delta y&#x3D;f(x_0+\Delta x)-f(x_0)$ ；如果 $\Delta y$ 与 $\Delta x$ 之比当 $\Delta x\to0$ 时的极限">
+<meta property="og:type" content="article">
+<meta property="og:title" content="math">
+<meta property="og:url" content="http://yoursite.com/2020/02/13/math/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微积分导数1. 定义设函数 $y&#x3D;f(x)$ 在点 $x_0$ 的某个邻域内有定义，当自变量 $x$ 在 $x_0$ 处取得增量 $\Delta x$ （点 $x_0+\Delta x$ 仍在该邻域内）时，相应地，因变量取得增量 $\Delta y&#x3D;f(x_0+\Delta x)-f(x_0)$ ；如果 $\Delta y$ 与 $\Delta x$ 之比当 $\Delta x\to0$ 时的极限">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-13T03:09:21.866Z">
+<meta property="article:modified_time" content="2020-02-22T06:18:21.022Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,116 +66,117 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/29/solution-p4850/" class="archive-article-date">
-  <time datetime="2020-02-29T13:37:48.000Z" itemprop="datePublished">Feb 29</time>
+        <section id="main"><article id="post-math" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/13/math/" class="article-date">
+  <time datetime="2020-02-13T03:09:21.866Z" itemprop="datePublished">2020-02-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/29/solution-p4850/">题解 P4850 【[IOI2009]葡萄干raisins】</a>
+    <h1 class="article-title" itemprop="name">
+      math
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/21/po/" class="archive-article-date">
-  <time datetime="2020-02-21T04:55:38.000Z" itemprop="datePublished">Feb 21</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/21/po/">物竞知识梳理</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/20/argos/" class="archive-article-date">
-  <time datetime="2020-02-20T14:31:24.000Z" itemprop="datePublished">Feb 20</time>
-</a>
+        <h1 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h3><p>设函数 $y=f(x)$ 在点 $x_0$ 的某个邻域内有定义，当自变量 $x$ 在 $x_0$ 处取得增量 $\Delta x$ （点 $x_0+\Delta x$ 仍在该邻域内）时，相应地，因变量取得增量 $\Delta y=f(x_0+\Delta x)-f(x_0)$ ；如果 $\Delta y$ 与 $\Delta x$ 之比当 $\Delta x\to0$ 时的极限存在，那么称函数 $y=f(x)$ 在点 $x_0$ 处可导，并称这个极限为函数 $y=f(x)$ 在点 $x_0$ 处的导数，记为 $f’(x_0)$ ，即<br>$$<br>f’(x_0)=\lim\limits_{\Delta x\to0}\frac{\Delta y}{\Delta x}<br>=\lim\limits_{\Delta x\to0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x},<br>$$<br>也可记作 $y’|x=x_0$ ， $\frac{\mathrm dy}{\mathrm dx}\Big|<em>{x=x_0}$ 或 $\frac{\mathrm df(x)}{\mathrm dx}\Big|</em>{x=x_0}$ 。</p>
+<h3 id="2-求导"><a href="#2-求导" class="headerlink" title="2. 求导"></a>2. 求导</h3><h4 id="2-1-求导四则的运算法则"><a href="#2-1-求导四则的运算法则" class="headerlink" title="2-1 求导四则的运算法则"></a>2-1 求导四则的运算法则</h4><p>加/减法：$[u(x)\pm v(x)]’=u’(x)\pm v’(x)$</p>
+<ul>
+<li>推广：$\left[\sum\limits_{i=1}^n u_i(x)\right]’=\sum\limits_{i=1}^n u’_i(x)$</li>
+</ul>
+<p>乘法：$[u(x)\cdot v(x)]’=u’(x)\cdot v(x)+u(x)\cdot v’(x)$</p>
+<ul>
+<li>数乘性：$[c\cdot u(x)]’=c\cdot u’(x)$</li>
+<li>推广： $\left[\prod\limits_{i=1}^n u_i(x)\right]’=\sum\limits_{i=1}^n (u_1\cdots u’_i\cdots u_n)$</li>
+</ul>
+<p>除法：$<br>\left[<br>\frac{u(x)}{v(x)}<br>\right]’<br>=\frac{u’(x)v(x)-u(x)v’(x)}{v^2(x)},v(x)\not =0<br>$</p>
+<h4 id="2-2-反函数的求导法则"><a href="#2-2-反函数的求导法则" class="headerlink" title="2-2 反函数的求导法则"></a>2-2 反函数的求导法则</h4><p>如果函数 $x=f(y)$ 在区间 $I_y$ 内单调、可导且 $f’(y)\not =0$ ，那么它的反函数 $y=f^{-1}(x)$ 在区间 $I_x={x|x=f(x),y\in I_y}$ 内也可导，且<br>$$<br>[f^{-1}(x)]’=\frac1{f’(y)}<br>\ \text{或}\<br>\frac{dy}{dx}=\frac1{\frac{dx}{dy}}<br>$$</p>
+<h4 id="2-3-复合函数求导法则"><a href="#2-3-复合函数求导法则" class="headerlink" title="2-3 复合函数求导法则"></a>2-3 复合函数求导法则</h4><p>若 $u=g(x)$ 在点 $x$ 可导，而 $y=f(u)$ 在点 $u=g=(x)$ 可导，那么复合函数 $y=f[g(x)]$ 在点 $x$ 可导，且其导数为<br>$$<br>\frac{dy}{dx}=<br>$$</p>
+<h3 id="2-导数公式"><a href="#2-导数公式" class="headerlink" title="2. 导数公式"></a>2. 导数公式</h3><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th align="left">函数解析式</th>
+<th align="left">导函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>函数</td>
+<td align="left">$y=f(x)$</td>
+<td align="left">$y’=f’(x)$</td>
+</tr>
+<tr>
+<td>常函数</td>
+<td align="left">$y=C$</td>
+<td align="left">$y=0$</td>
+</tr>
+<tr>
+<td>幂函数</td>
+<td align="left">$y=x^\mu$<br>$y=e^x$</td>
+<td align="left">$y’=\mu x^{\mu-1}$<br>$y’=e^x$</td>
+</tr>
+<tr>
+<td>指数函数</td>
+<td align="left">$y=a^x$</td>
+<td align="left">$y’=a^x\ln a$</td>
+</tr>
+<tr>
+<td>底数函数</td>
+<td align="left">$y=log_a x$<br>$y=\ln x$</td>
+<td align="left">$y’=\frac 1 {x\ln a}$<br>$y’=\frac 1 x$</td>
+</tr>
+<tr>
+<td>正弦函数</td>
+<td align="left">$y=\sin x$</td>
+<td align="left">$y’=\cos x$</td>
+</tr>
+<tr>
+<td>余弦函数</td>
+<td align="left">$y=\cos x$</td>
+<td align="left">$y’=-\sin x$</td>
+</tr>
+</tbody></table>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/20/argos/">Argos：几秒内打造 Gnome Shell 扩展</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/13/math/" class="archive-article-date">
-  <time datetime="2020-02-13T03:09:21.866Z" itemprop="datePublished">Feb 13</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/13/math/" data-id="ck77qsmrt000g3kua1cth9ynn" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/13/math/">math</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/11/hexo-blog/" class="archive-article-date">
-  <time datetime="2020-02-11T09:09:49.000Z" itemprop="datePublished">Feb 11</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/11/hexo-blog/">用 Hexo 免费搭建博客</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/20/argos/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Argos：几秒内打造 Gnome Shell 扩展
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/02/11/hexo-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">用 Hexo 免费搭建博客</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
